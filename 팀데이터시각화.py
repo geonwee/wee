@@ -248,20 +248,20 @@ team_name_mapping = {
 
 
 
-import matplotlib
-from matplotlib import font_manager
+# import matplotlib
+# from matplotlib import font_manager
 
-!sudo apt-get install -y fonts-nanum
-!sudo fc-cache -fv
+# !sudo apt-get install -y fonts-nanum
+# !sudo fc-cache -fv
 
-fontpaths = ["/usr/share/fonts/truetype/nanum/"]
-font_files = font_manager.findSystemFonts(fontpaths=fontpaths)
+# fontpaths = ["/usr/share/fonts/truetype/nanum/"]
+# font_files = font_manager.findSystemFonts(fontpaths=fontpaths)
 
-for ff in font_files:
-    font_manager.fontManager.addfont(ff)
+# for ff in font_files:
+#     font_manager.fontManager.addfont(ff)
 
-matplotlib.rc('font', family="NanumGothic")
-matplotlib.rcParams['axes.unicode_minus'] = False
+# matplotlib.rc('font', family="NanumGothic")
+# matplotlib.rcParams['axes.unicode_minus'] = False
 
 # 팀 이름 통합
 train_data['teamname'] = train_data['teamname'].replace(team_name_mapping)
