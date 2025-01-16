@@ -599,22 +599,22 @@ if 'golddiffat15' in lck_2022.columns:
 else:
     print("데이터에 'golddiffat15' 열이 없습니다.")
 
-"""한글"""
+# """한글"""
 
-import matplotlib
-from matplotlib import font_manager
+# import matplotlib
+# from matplotlib import font_manager
 
-!sudo apt-get install -y fonts-nanum
-!sudo fc-cache -fv
+# !sudo apt-get install -y fonts-nanum
+# !sudo fc-cache -fv
 
-fontpaths = ["/usr/share/fonts/truetype/nanum/"]
-font_files = font_manager.findSystemFonts(fontpaths=fontpaths)
+# fontpaths = ["/usr/share/fonts/truetype/nanum/"]
+# font_files = font_manager.findSystemFonts(fontpaths=fontpaths)
 
-for ff in font_files:
-    font_manager.fontManager.addfont(ff)
+# for ff in font_files:
+#     font_manager.fontManager.addfont(ff)
 
-matplotlib.rc('font', family="NanumGothic")
-matplotlib.rcParams['axes.unicode_minus'] = False
+# matplotlib.rc('font', family="NanumGothic")
+# matplotlib.rcParams['axes.unicode_minus'] = False
 
 if 'league' in train_data.columns and 'split' in train_data.columns:
     lck_data = train_data[train_data['league'] == 'LCK']
