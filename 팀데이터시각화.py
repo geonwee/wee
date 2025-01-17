@@ -16,10 +16,10 @@ def reset_seeds(seed):
     np.random.seed(seed)
 
 # 데이터 읽기
-train_tr = pd.read_csv(f"{DATA_PATH}/teams_train.csv")  # 학습용 데이터
-train_target = pd.read_csv(f"{DATA_PATH}/teams_train_target.csv")  # 학습용 정답
-test_tr = pd.read_csv(f"{DATA_PATH}/teams_test.csv")  # 테스트 데이터
-test_target = pd.read_csv(f"{DATA_PATH}/teams_test_target.csv")  # 테스트 정답
+train_tr = pd.read_csv("teams_train.csv")  # 학습용 데이터
+train_target = pd.read_csv("teams_train_target.csv")  # 학습용 정답
+test_tr = pd.read_csv("teams_test.csv")  # 테스트 데이터
+test_target = pd.read_csv("teams_test_target.csv")  # 테스트 정답
 
 print(train_tr.shape, test_tr.shape)  # 데이터 확인
 
