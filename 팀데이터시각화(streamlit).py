@@ -4,11 +4,24 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import rc
 
+st.title("GitHub에서 CSV 데이터 불러오기")
 
-# 데이터 로드
-df = pd.read_csv(r"C:\Users\USER\Desktop\data\train_data.csv")
-st.write("데이터프레임 미리보기:")
-st.dataframe(df.head()) 
+# GitHub 파일 URL
+url = "https://github.com/geonwee/wee/blob/main/train_data.csv"
+
+try:
+    df = pd.read_csv(url)
+    st.write("데이터 미리보기:")
+    st.dataframe(df)
+    
+except Exception as e:
+    st.error(f"데이터를 불러오는 데 실패했습니다: {e}")
+
+
+# # 데이터 로드
+# df = pd.read_csv(r"C:\Users\USER\Desktop\data\train_data.csv")
+# st.write("데이터프레임 미리보기:")
+# st.dataframe(df.head()) 
 
 # 한글 폰트 설정 
 rc('font', family='Malgun Gothic')  
