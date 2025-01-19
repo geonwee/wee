@@ -6,18 +6,16 @@ from matplotlib import rc
 
 st.title("GitHub에서 CSV 데이터 불러오기")
 
-# GitHub 파일 URL
-url = "https://github.com/geonwee/wee/blob/main/train_data.csv"
+# GitHub RAW URL
+url = "https://raw.githubusercontent.com/geonwee/wee/main/train_data.csv"
 
 try:
+    # CSV 파일 읽기
     df = pd.read_csv(url)
     st.write("데이터 미리보기:")
     st.dataframe(df)
-    
 except Exception as e:
-    st.error(f"데이터를 불러오는 데 실패했습니다: {e}")
-
-
+    st.error(f"CSV 파일을 불러오는 데 실패했습니다: {e}")
 # # 데이터 로드
 # df = pd.read_csv(r"C:\Users\USER\Desktop\data\train_data.csv")
 # st.write("데이터프레임 미리보기:")
