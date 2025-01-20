@@ -22,8 +22,10 @@ except Exception as e:
 # st.dataframe(df.head()) 
 
 # 한글 폰트 설정
-plt.rcParams['font.family'] = 'Malgun Gothic'  
-plt.rcParams['axes.unicode_minus'] = False  
+import matplotlib.pyplot as plt
+
+plt.rcParams["font.family"] = "Malgun Gothic"  # AppleGothic
+plt.rcParams["axes.unicode_minus"] = False
 
 # 팀 이름 정리 (중복 이름 통합)
 team_name_mapping = {
