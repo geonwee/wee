@@ -21,8 +21,8 @@ except Exception as e:
 # st.write("데이터프레임 미리보기:")
 # st.dataframe(df.head()) 
 
-# 한글 폰트 설정 
-rc('font', family='Malgun Gothic')  
+# 한글 폰트 설정
+plt.rcParams['font.family'] = 'Malgun Gothic'  
 plt.rcParams['axes.unicode_minus'] = False  
 
 # 팀 이름 정리 (중복 이름 통합)
